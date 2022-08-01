@@ -12,6 +12,8 @@ class Recycle extends Model
     protected $fillable = [
         "item_weight_input",
         "item_weight_output",
+        "costic_soda",
+        "detergent",
         "factory_id",
         "user_id"
     ];

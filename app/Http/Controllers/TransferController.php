@@ -209,7 +209,7 @@ class TransferController extends Controller
                     ->where('id', $request->id)
                     ->first();
         $transfer->update(['status' => $request->status]);
-        $transfer->update(['rej_reason' => $request->reason]);
+        $transfer->update(['comments' => $request->comments]);
         return response()->json([
             "status" => $this->successStatus,
             "message" => "Successfull",

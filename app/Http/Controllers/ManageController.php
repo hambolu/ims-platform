@@ -81,6 +81,7 @@ class ManageController extends Controller
     {
         $items = Collection::find($id);
         $items->delete();
+        
         return back()->with('message', 'Deleted Successfully');
     }
 

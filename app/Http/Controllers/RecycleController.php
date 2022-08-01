@@ -27,6 +27,8 @@ class RecycleController extends Controller
     public function recycle(Request $request){
         $recycle = Recycle::create([
             "item_weight_input" => $request->item_weight_input,
+            "costic_soda" => $request->costic_soda,
+            "detergent" => $request->detergent,
             "item_weight_output" => $request->item_weight_output,
             "location_id"    => Auth::user()->location_id,
             "factory_id"    => Auth::user()->factory_id,

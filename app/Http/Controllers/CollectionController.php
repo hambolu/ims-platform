@@ -22,6 +22,10 @@ class CollectionController extends Controller
         $collect = new Collection();
         $collect->item_id = $request->input('item');
         $collect->item_weight = $request->input('item_weight');
+        $collect->price_per_kg = $request->input('price_per_kg');
+        $collect->transport = $request->input('transport');
+        $collect->loader = $request->input('loader');
+        $collect->others = $request->input('others');
         $collect->location_id = Auth::user()->location_id;
         $collect->amount = $request->input('amount');
         $collect->user_id = Auth::id();

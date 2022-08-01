@@ -26,7 +26,10 @@ class SalesController extends Controller
         try{
             $sales = new Sales();
         $sales->item_weight = $request->item_weight;
+        $sales->price_per_tone = $request->price_per_tone;
+        $sales->feright = $request->feright;
         $sales->amount = $request->amount;
+        $sales->currency = $request->currency;
         $sales->factory_id = Auth::user()->factory_id;
         $sales->user_id = Auth::id();
         $sales->location_id = Auth::user()->location_id;
